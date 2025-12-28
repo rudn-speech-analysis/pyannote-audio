@@ -40,9 +40,10 @@ from pyannote.core import Segment
 from torch import Tensor
 
 try:
-    import torchcodec
-    from torchcodec import AudioSamples
-    from torchcodec.decoders import AudioDecoder, AudioStreamMetadata
+    # import torchcodec
+    # from torchcodec import AudioSamples
+    # from torchcodec.decoders import AudioDecoder, AudioStreamMetadata
+    raise Exception("Deliberately disabling torchcodec.")
 except Exception as e:
     warnings.warn(
         "\ntorchcodec is not installed correctly so built-in audio decoding will fail. Solutions are:\n"
